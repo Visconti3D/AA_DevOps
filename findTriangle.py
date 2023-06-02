@@ -1,15 +1,36 @@
 lados = []
+print()
+print('APP CLASSIFICAÇÃO DE TRIÂNGULOS')
+print()
+print('Digite 3 valores inteiros para cada lado do triângulo:')
+print()
 
-v1 = int(input('Entre o 1º lado:'))
-v2 = int(input('Entre o 2º lado:'))
-v3 = int(input('Entre o 3º lado:'))
+v1 = None
+while v1 is None:
+    try:
+        v1 = int(input('Entre o 1º lado:'))
+    except ValueError:
+        print('Porfavor digite um número inteiro.')
+
+v2 = None
+while v2 is None:
+    try:
+        v2 = int(input('Entre o 2º lado:'))
+    except ValueError:
+        print('Porfavor digite um número inteiro.')
+   
+v3 = None
+while v3 is None:
+    try:
+        v3 = int(input('Entre o 3º lado:'))
+    except ValueError:
+        print('Porfavor digite um número inteiro.')           
+
 
 lados.append(v1)
 lados.append(v2)
 lados.append(v3)
-
 print(lados)
-
 
 
 if lados[0] > (lados[1] and lados[2]):
